@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Wilddog from 'wilddog'
 import WildVue from 'wildvue'
-import './config/rem'
 
 import Edit from './components/Edit'
 import Result from './components/Result'

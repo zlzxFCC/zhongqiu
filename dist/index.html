@@ -16,12 +16,34 @@
   <script>
     window.pageData={prefix:'/api3',apimoments:'moments',dot:false,hash:'HJpH9IiCl'}
   </script>
-<link href="static/css/app.3e8930d1d447a2640101.css" rel="stylesheet"></head>
-
-<body>
-  <div id="app">
-    <router-view></router-view>
-  </div>
-<script type="text/javascript" src="static/js/manifest.37eb8cf855822fd59353.js"></script><script type="text/javascript" src="static/js/vendor.11e89755c3bedbba75bb.js"></script><script type="text/javascript" src="static/js/app.3e8930d1d447a2640101.js"></script></body>
-
+<style>
+      html {
+        height: 100%;
+      }
+      body, #app {
+        height: 100%;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+      }
+    </style>
+    <script>
+        function setPxPerRem(){
+            //把viewport分成10份的rem，html标签的font-size设置为1rem的大小;
+            var pxPerRem = document.documentElement.clientWidth / 10
+            document.documentElement.style.fontSize = pxPerRem + 'px'
+        }
+        setPxPerRem()
+        window.onresize = function() {
+          setPxPerRem()
+        }
+    </script>
+  <link href="static/css/app.62bc1cd61dc4132bcffe.css" rel="stylesheet"></head>
+  <body>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+  <script type="text/javascript" src="static/js/manifest.c8006727eca9db20f4b7.js"></script><script type="text/javascript" src="static/js/vendor.b86936d5c2986adf8723.js"></script><script type="text/javascript" src="static/js/app.62bc1cd61dc4132bcffe.js"></script></body>
 </html>
