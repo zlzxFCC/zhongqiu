@@ -1,6 +1,9 @@
 import App from '../App'
 
 const index = r => require.ensure([], () => r(require('../page/index/index')), 'index')
+const Edit = r => require.ensure([], () => r(require('../components/Edit')), 'Edit')
+const Result = r => require.ensure([], () => r(require('../components/Result')), 'Result')
+const Answer = r => require.ensure([], () => r(require('../components/Answer')), 'Answer')
 
 export default [{
     path: '/',
@@ -8,11 +11,19 @@ export default [{
     children: [ //二级路由。对应App.vue
         {
             path: '',
-            redirect: '/index'
+            redirect: '/Edit'
         },
         {
-          path: '/index',
-          component: index,
+          path: '/Edit',
+          component: Edit,
+        },
+        {
+          path: '/Result',
+          component: Result,
+        },
+        {
+          path: '/Answer',
+          component: Answer,
         }
     ]
 }]
