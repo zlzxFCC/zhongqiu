@@ -150,6 +150,10 @@ export default {
     if (!username) {
       const input = document.getElementById('name-input')
       input.focus()
+      
+      // let input=document.getElementById('name-input')
+      // input.focus()
+
     }
   },
   methods: {
